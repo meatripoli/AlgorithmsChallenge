@@ -3,17 +3,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: calc(20px + 2vmin);
+    font-size: calc(30px + 2vmin);
     color: white;
 }
-.author{
+#author,p{
     font-size: 15px;
 }
-.dropdown{
+#dropdown-basic-button{
     background-color: #282c34;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 1vmin);
     color: white;
+    border-color: #282c34;
+}
+#dropdown{
+    background-color: #282c34;
+}
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+    background-color: transparent;
+    width: 80vw;
 }

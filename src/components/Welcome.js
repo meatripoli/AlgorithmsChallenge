@@ -3,8 +3,8 @@ import './style.css';
 
 function Welcome(props) {
     return (<header className="title">
-        <h1>Algorithms </h1> 
-        <p className="author"> by Maria</p>
+        <h1 className="title">Algorithms </h1> 
+        <p id="author"> by Maria</p>
     </header>);
 };
 
