@@ -30,10 +30,13 @@ export default function(){
   };
   return (<div id='dropdown'>
     <DropdownButton id="dropdown-basic-button" title="Choose an Algorithm to use">
-      <Dropdown.Item onSelect={()=>handleState('search')}>Binary Search</Dropdown.Item>
-      <Dropdown.Item onSelect={()=>handleState('sort')}>Bubble Sort</Dropdown.Item>
+      <Dropdown.Item onSelect={()=>handleState('search')}>Search</Dropdown.Item>
+      <Dropdown.Item onSelect={()=>handleState('sort')}>Sort</Dropdown.Item>
     </DropdownButton>
     <SearchForm visible={state.search}>></SearchForm>
     <SortForm visible={state.sort}></SortForm>
   </div>);
 }
+
+//make SearchForm and SortForm one jumbotron with inputs so I can expand
+//possible inputs needed title,algorithm description,
