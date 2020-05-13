@@ -8,7 +8,8 @@ import {Dropdown,DropdownButton} from 'react-bootstrap';
 export default function(){
   const [state,setState]=useState({
     search: false,
-    sort: false
+    sort: false,
+    title:'Choose an Algorithm to use'
   });
 
   function handleState(key){
@@ -16,20 +17,22 @@ export default function(){
       case 'search':
         setState({
           search: true,
-          sort: false
+          sort: false,
+          title:'Search'
         });
         break;
       case 'sort':
         setState({
           search: false,
-          sort: true
+          sort: true,
+          title:'Sort'
         });
         break;
     }
     
   };
   return (<div id='dropdown'>
-    <DropdownButton id="dropdown-basic-button" title="Choose an Algorithm to use">
+    <DropdownButton id="dropdown-basic-button" title={state.title}>
       <Dropdown.Item onSelect={()=>handleState('search')}>Search</Dropdown.Item>
       <Dropdown.Item onSelect={()=>handleState('sort')}>Sort</Dropdown.Item>
     </DropdownButton>
